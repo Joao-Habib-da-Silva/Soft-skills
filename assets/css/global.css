@@ -1,0 +1,231 @@
+/*I started with my favorite font*/
+@import url(assets/css/fonts.css);
+/*Then i put the importants parts, resteing the margin and padding*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    scroll-behavior: smooth;
+
+}
+/*Now this is the Colors Palet, that i will change with the dark and light mode that i created with css and JS*/
+:root {
+    --bg-color: #fefae0;
+    --font: black;
+    --hover: #005f73;
+    --footer: #faedcd;
+    --icon-hover: #006d77;
+    --square: #d4a373;
+    --square-hover: #ccd5ae;
+    --bottom: #c78543;
+}
+:root.darktheme {
+    --bg-color: #000000;
+    --font: white;
+    --hover: #90e0ef;
+    --footer: #000000;
+    --square-hover: #219ebc;
+    --icon-hover: #219ebc;
+    --square: rgba(17, 40, 100, 0.3);
+    --bottom: rgba(16, 47, 123, 0.3);
+}
+body, header {
+    transition: 0.5s ease-in-out;
+}
+/*Design of all pages, starting with the header, navbar and your transitions*/
+header {
+    display: flex;
+    background-color: var(--bg-color);
+    color: var(--font);
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    justify-content: space-between;
+}
+header ul {
+    margin-left: 900px;
+}
+header li {
+    display: inline;
+    list-style: none;
+    font-size: larger;
+    margin-left: 30px;
+    position: relative;
+}
+header a {
+    color: var(--font);
+    font-weight: 600;
+    text-decoration: none;
+}
+header h1 {
+    padding-left: 40px;
+    cursor: pointer;
+}
+header i {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 20px;
+
+}
+header li:first-child:after, li:nth-child(2):after {
+    content: '';
+    width: 0px;
+    height: 5px;
+    border-radius: 30px;
+    background-color: var(--hover);
+    transition: 0.5s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+header li:first-child:hover:after, li:nth-child(2):hover:after {
+    width: 60px;
+}
+header li:nth-child(3):after {
+    content: '';
+    width: 0px;
+    border-radius: 30px;
+    height: 5px;
+    background-color: var(--hover);
+    transition: 0.5s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+header h1:hover {
+    color: var(--hover);
+    transition: 0.5s ease-in-out;
+}
+header li:nth-child(3):hover:after {
+    width:110px ;
+}
+header a {
+    transition: 0.5s ease-in-out;
+}
+header a:hover {
+    color: var(--hover);
+    transition: 0.5s ease-in-out;
+}
+header i:hover {
+    color: var(--icon-hover);
+    transition: 0.5s ease-in-out;
+}
+/*Navbar*/
+#navbar {
+    width: 1000px;
+    background-color: var(--bg-color);
+    position: fixed;
+    margin-top: 80px;
+    width: 300px;
+    height: 1000px;
+    transform: translateX(0px);
+    right: 0;
+    transition: 0.5s ease-in-out;
+}
+#navbar.open {
+    display: flex;
+    transform: translateX(500px);
+    transition: 0.5s ease-in-out;
+}
+#navbar a {
+    color: var(--font);
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+#navbar ul {
+    margin-left: 50px;
+    font-size: 1.5rem;
+    font-weight: 600; 
+    margin-top: 100px;
+}
+#navbar li {
+    list-style: none;
+    margin-top: 40px;
+    position: relative;
+}
+#navbar a:hover {
+    color: var(--hover);
+    transition: 0.5s ease-in-out;
+}
+/*Footer*/
+footer {
+    background-color: var(--footer);
+    height: 200px;
+    display: grid;
+    place-items: center;
+    transition: 0.5s ease-in-out;
+}
+footer i {
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 20px;
+    transition: 0.5s ease-in-out;
+    border-radius: 50%;
+    color: var(--font);
+}
+footer i:hover {
+    border: 2px solid var(--icon-hover);
+    border-radius: 50%;
+    transform: scale(1.1);
+    color: var(--icon-hover);
+}
+footer p {
+    color: var(--font);
+    font-weight: 600;
+    font-size: large;
+    cursor: pointer;
+}
+footer p:hover {
+    transition: 0.5s ease-in-out;
+    color: var(--icon-hover);
+
+}
+#content {
+margin-right: 250px;
+margin-top: 60px;
+}
+#content h1 {
+ color: var(--hover);
+ margin-bottom: 40px;
+
+}
+#content h2 {
+    margin-bottom: 40px;
+}
+#content p {
+    margin-bottom: 20px;
+}
+#content li, p  {
+    list-style: none;
+    font-weight: 600;
+    font-size: middle;
+}
+#trail {
+    width: 70px;
+    background-color: grey;
+    height: 33px;
+    border-radius: 30px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+#ball {
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    
+    border-radius:50% ;
+    transition: 0.5s ease-in-out;
+    
+}
+#ball.darktheme {
+    transition: 0.5s ease-in-out;
+    margin-left: 37px;
+    transition: 0.5s ease-in-out;
+}
+footer a {
+    color: var(--hover);
+    text-decoration: none;
+}

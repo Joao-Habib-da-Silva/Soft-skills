@@ -1,0 +1,139 @@
+@import url(assets/css/global.css);
+#container {
+    background-color: var(--bg-color);
+padding-top: 100px;
+  
+}
+#container {
+    transition: 0.5s ease-in-out;
+}
+#content {
+    color: var(--font);
+}
+#firstpart {
+    display: flex;
+    justify-content: space-between;
+}
+#hello img {
+    width: 700px;
+}
+#remake {
+    background-color: var(--footer);
+    display: grid;
+    place-items: center;
+    height: 200px;
+    transition: 0.5s ease-in-out;
+}
+#remake h1 {
+    margin-bottom: -50px;
+    color: var(--hover);
+}
+#remake p {
+    font-weight: 600;
+    color: var(--font);
+}
+#content {
+margin-right: 250px;
+margin-top: 60px;
+}
+#content h1 {
+ color: var(--hover);
+ margin-bottom: 40px; 
+}
+#content h2 {
+margin-bottom: 40px;
+}
+#content p {
+margin-bottom: 20px;
+}
+#content li, p  {
+list-style: none;
+font-weight: 600;
+font-size: middle;
+ }
+ header li:nth-child(3):hover:after {
+    width:110px ;
+}
+    #trail {
+        width: 70px;
+        background-color: grey;
+        height: 33px;
+        border-radius: 30px;
+        margin-left: 50px;
+        cursor: pointer;
+    }
+    #ball {
+        background-color: white;
+        height: 30px;
+        width: 30px;
+        
+        border-radius:50% ;
+        transition: 0.5s ease-in-out;
+        
+    }
+    #ball.darktheme {
+        transition: 0.5s ease-in-out;
+        margin-left: 37px;
+        transition: 0.5s ease-in-out;
+    }
+    
+#navbar li:after {
+    content: '';
+    width: 0px;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    border-radius: 30px;
+    background-color: var(--hover);
+    position: absolute;
+    transition: width 0.5s ease-in-out;
+
+}   
+#navbar li:hover::after {
+   width: 80px;
+}
+#navbar li:nth-child(2):hover::after {
+    width: 70px;
+}
+#navbar li:nth-child(3):hover::after {
+    width: 60px;
+}
+header li:nth-child(3):hover::after {
+    width: 50px;
+}
+@media(max-width:400px) {
+    #firstpart {
+        display: inline;
+    }
+    #hello img {
+        width:  380px;
+        height: 380px;
+    }
+    #content {
+        display: grid;
+        place-items: center;
+        margin-right: 0;
+        height: 500px;
+    }
+    #content h1 {
+        text-align: center;
+        margin-top: -130px;
+        margin-bottom: -130px;
+    }
+    #content h2 {
+        text-align: center;
+        margin-bottom:-50px;
+    }
+    #content ul {
+        margin-top: -50px;
+    }
+    #content li:hover:after {
+        width: 0px;
+    }
+    #remake {
+        text-align: center;
+    }
+    header ul {
+        display: none ;
+    }
+}
