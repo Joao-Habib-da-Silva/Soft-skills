@@ -1,5 +1,5 @@
 /*I started with my favorite font*/
-@import url(assets/css/fonts.css);
+@import url(../css/fonts.css);
 /*Then i put the importants parts, resteing the margin and padding*/
 * {
     margin: 0;

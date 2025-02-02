@@ -1,4 +1,4 @@
-@import url(assets/css/global.css);
+@import url(../global.css);
 #container {
     background-color: var(--bg-color);
 padding-top: 100px;
